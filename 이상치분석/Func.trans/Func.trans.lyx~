@@ -1,0 +1,1146 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+% LaTeX에서 한글사용을 위해 사용해야하는 패키지
+\usepackage[hangul]{kotex}
+\setmainhangulfont{함초롬바탕} % 메인 한글폰트를 지정해줌
+
+
+% 페이지 스타일 'fancy'를 사용하게 되면, 페이지 윗부분에 줄을 하나 그어줌.
+% fancy 스타일을 사용할때 사용할수 있는 옵션은 아래와 같다.
+%\lhead{7장 과제} % 줄 왼쪽 부분에 적을 내용
+%\chead{Bayes Statistics} % 가운데 부분
+%\rhead{김철응 교수님} % 오른쪽 부분
+%=====================================%
+
+% \renewcommand\footrulewidth{0.4pt}  % 페이지번호 위에 직선을그어주는 명령어
+
+
+
+
+%=== 문서의 줄간격을 수정해주는 패키지 ===%
+\usepackage{setspace} 
+\setstretch{1.5} % 간격 임의로 지정 
+% \onehalfspacing  한칸반 간격인것 같음
+%=====================================%
+
+\usepackage{tikz} % LaTeX으로 Graphical한 작업을 할때 사용하는 패키지
+
+
+
+\usepackage{hyperref} % 하이퍼링크 색깔 바꿔주기 위해
+
+% 아래 옵션을 활성화시키면 하이퍼링크걸린 문자들의 색깔이 red로 변함
+%\hypersetup{         
+%    colorlinks,
+%    citecolor=red,
+%    filecolor=red,
+%    linkcolor=red,
+%    urlcolor=red
+%}
+
+
+%\usepackage{multicol} % 표지는 one-column, 본문은 two-column 적용해주기 위해
+% 위 명령어를 활성화 시켜준 뒤
+% \begin{multicols}{2}    \end{multicols} 사이에 본문을 작성하면
+% 그 부분만 column이 나눠짐
+\end_preamble
+\options most, usenames, dvipsnames
+\use_default_options true
+\begin_modules
+tcolorbox
+theorems-ams
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\output_sync_macro "\synctex=1"
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic true
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\b}{\beta}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\a}{\alpha}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ddd}{\cdots}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\shat}[1]{\hat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lhat}[1]{\widehat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\inf}{\infty}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lam}{\lambda}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\df}[2]{\dfrac{#1}{#2}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ss}[1]{\left(#1\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\mm}[1]{\left\{  #1\right\}  }
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ll}[1]{\left[#1\right]}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\si}{\sigma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\rr}[1]{\sqrt{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\d}{\cdot}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ones}{\,}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\twos}{\:}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\threes}{\;}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\d}{\delta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\app}{\thickapprox}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ep}{\epsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pro}{\times}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ovv}[1]{\overline{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\right}{\longrightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bold}[1]{\mathbf{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\shape smallcaps
+\size normal
+Yonsei University, Department of Applied Statistics
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\shape default
+\size default
+ 
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\series bold
+\size giant
+Interpreting and Unifying Outlier Scores
+\series default
+\size default
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "2pt"
+
+\end_inset
+
+
+\begin_inset VSpace 4in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+12기 신보현
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reference Paper: Interpreting and Unifying Outlier Scores [by Hans-Peter
+ Kriegel Peer Kr¨oger Erich Schubert Arthur Zimek]
+\end_layout
+
+\begin_layout Standard
+0.
+ Abstract
+\end_layout
+
+\begin_layout Standard
+이상치 탐지 기법은 크게 이상치인지 아닌지 label을 만드는 기법과 이상치의 '정도'를 수치로 나타내는 기법으로 구성된다.
+ 후자 기법의 경우, 다양한 이상치 모델이 있고 그 값의 범위, 의미가 각 모델마다 다름은 당연하다.
+ 따라서 이러한 값들을 비교하며 해석하기가 쉽지 않다.
+ 따라서 본 논문에서는 다양한 이상치 모델이 제시하는 값을 통일된 기준으로 비교하기 위해서, 이러한 값들을 0과 1사이의 값으로
+ 변환하여 이상치의 정도를 나타낸다.
+ 해당 논문에서 적용되는 기법은 ABOD, SOD, FBOD이다.
+\end_layout
+
+\begin_layout Standard
+1.
+ Introduction
+\end_layout
+
+\begin_layout Standard
+이상치 모델마다 이상치 정도를 나타내는 값의 범위, 의미가 다르다.
+ 심지어 이상치 모델 A에서의 값 x가 어떤 데이터 Z에 관해서는 이상치로 판단되는 값이지만 어떤 데이터 Y에 관해서는 이상치가
+ 아닌 정상적인 값일수도 있다.
+ 이러한 문제점을 방지하기 위해서 해당 논문에서는 두 가지 방법을 제시한다.
+ 
+\end_layout
+
+\begin_layout Itemize
+주어진 데이터 세트에서 특정한 데이터 분포로부터 독립적이게 만드는 정규화
+\end_layout
+
+\begin_layout Itemize
+이상치 값을 0과 1사이로 만들어 확률로 해석할 수 있게 하는 변환
+\end_layout
+
+\begin_layout Standard
+2.
+ Method
+\end_layout
+
+\begin_layout Standard
+regular과 normal의 의미부터 확실하게 짚고 넘어가자.
+ 논문의 표현을 그대로 쓰면 아래와 같다.
+\begin_inset Formula 
+\[
+An\threes outlier\threes score\threes\mathcal{S}\threes is\threes called\threes regular\threes if\threes S(o)\geq0\threes for\threes any\threes object\threes o
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+inlier\threes if\threes S(o)\app0,\threes outlier\threes S(o)\gg0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+An\threes outlier\threes score\threes S\threes is\threes normal\threes if\threes S\threes is\threes regular\threes and\threes the\threes values\threes are\threes restricted\threes by\threes S(o)\in[0,1]
+\]
+
+\end_inset
+
+regular(normal)인 점수로 바꾸는 변환을 regular(normal)하다고 부른다.
+\begin_inset Newline newline
+\end_inset
+
+변환의 중요한 특징은 변환 이후에 원래 점수의 순서를 유지해야 한다는 것이다.
+ 이를 아래와 같이 표현한다.
+\begin_inset Formula 
+\[
+\forall o_{1},o_{2}:\threes S(o_{1})\leq S(o_{2})\Longrightarrow T_{S}(o_{1})\leq T_{S}(o_{2})
+\]
+
+\end_inset
+
+또는 순서과 바뀌어도 그것을 그대로 유지하기만 하면 된다.
+\begin_inset Formula 
+\[
+\forall o_{1},o_{2}:\threes S(o_{1})\leq S(o_{2})\Longrightarrow T_{S}(o_{1})\geq T_{S}(o_{2})
+\]
+
+\end_inset
+
+이렇게 변환 이후에도 순서가 바뀌지 않으면(바뀌어도 모두 같은 방향으로 바뀐다면) 이러한 변환을 ranking-stable이라고
+ 부른다.
+\begin_inset Newline newline
+\end_inset
+
+변환은 크게 두 단계로 이루어진다.
+ 첫 번째는 regularization, 두 번째는 normalization이다.
+ 첫 번째 단계인 regularization(앞으로 Reg이라고 부른다)에서는 이상치 점수를 
+\begin_inset Formula $[0,\inf)$
+\end_inset
+
+의 범위로 변환시켜, 
+\begin_inset Formula $Reg(o)\app0$
+\end_inset
+
+일 때는 inliers, 
+\begin_inset Formula $Reg_{S}(o)\gg0$
+\end_inset
+
+일 때는 outliers라고 판단할 수 있는 환경을 만든다.
+ 두 번째 단계인 normalization에서는 
+\begin_inset Formula $[0,\inf)$
+\end_inset
+
+의 범위에 있는 값을 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ 범위 안에 들도록 변환을 한다.
+\end_layout
+
+\begin_layout Standard
+2.1 Regularization
+\end_layout
+
+\begin_layout Standard
+다른 이상치 점수는 regular인 상태가 되기 위해서 각자 다른 변환을 필요로 한다.
+ 다양한 이상치 점수에 맞는 여러 regularization을 소개한다.
+\end_layout
+
+\begin_layout Standard
+2.1.1 Baseline Regularization
+\end_layout
+
+\begin_layout Standard
+local outlier scores인 LOF와 LDOF 그리고 그것들의 변형은 아직 regular하지 않은데, 그 이유는 non-outlier
+s(inliers)가 가질 것으로 예상되는 값이 0이 아니기 때문이다(앞서 이상치 점수가 0과 가까울 때, 정상치라고 판단하는 기준을
+ 가진다면 regular하다고 했었다) LOF와 그 변형에 관해서는 inlier는 1의 값을 가질 것으로 기대된다(
+\begin_inset Formula $base_{LOF}=1)$
+\end_inset
+
+ LDOF에 관해서는 
+\begin_inset Formula $\df 12$
+\end_inset
+
+의 값을 가질 것으로 기대된다
+\begin_inset Formula $(base_{LDOF}=\df 12)$
+\end_inset
+
+ 각 모델에 관해서는 
+\begin_inset Formula $\gg base$
+\end_inset
+
+라면 이상치라고 판단된다.
+ 이를 regular하게 만들기 위해서, 
+\begin_inset Formula $o$
+\end_inset
+
+의 이상치 점수인 
+\begin_inset Formula $S(o)$
+\end_inset
+
+에서 baseline 값인 
+\begin_inset Formula $base_{S}$
+\end_inset
+
+을 빼는 변환을 생각해보자.
+ 원래 이상치 점수는 
+\begin_inset Formula $[base,\inf)$
+\end_inset
+
+의 범위에 있었지만 이러한 변환을 통해서 
+\begin_inset Formula $[0,\inf)$
+\end_inset
+
+의 범위에 있게 될 것이다.
+ 변환되기 전의 이상치 점수가 
+\begin_inset Formula $base_{S}$
+\end_inset
+
+보다 작아도 inliers이라고 판명했으므로, 음수 값이 나오지 않기 위해서 다음과 같이 조정을 한다.
+\begin_inset Formula 
+\[
+Reg_{S}^{base_{S}}(o)\coloneqq max\{0,S(o)-base_{S}\}
+\]
+
+\end_inset
+
+해당 변환은 ranking-stable하다.
+\begin_inset Formula 
+\begin{align*}
+S(o_{1})\leq S(o_{2})\Longleftrightarrow & S(o_{1})-base_{S}\leq S(o_{2})-base_{S}\\
+\Longrightarrow & max\{0,S(o_{1})-base_{S}\}\leq max\{0,S(o_{2})-base_{S}\}\\
+\Longleftrightarrow & Reg_{S}^{base_{S}}(o_{1})\leq Reg_{S}^{base_{S}}(o_{2})
+\end{align*}
+
+\end_inset
+
+2.1.2 Linear Inversion
+\end_layout
+
+\begin_layout Standard
+어떤 모델에서는 높은 점수가 inliers을 의미하기도 한다.
+ 만약 가우시안 모델의 밀도함수를 사용한다면 높은 밀도는 inliers을 의미하고 0에 가까운 밀도는 outliers을 의미할 것이다.
+ 이러한 모델을 regularize하기 위해 아래와 같은 변환을 생각한다.
+\begin_inset Formula 
+\[
+Reg_{S}^{lininv}(o)\coloneqq S_{max}-S(o)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $S_{max}\geq S(o)$
+\end_inset
+
+이기 때문에 이 변환은 regular하다(범위가 0이상 이므로) ranking-stability또한 쉽게 보일 수 있다.
+\begin_inset Formula 
+\begin{align*}
+S(o_{1})\leq S(o_{2}) & \Longleftrightarrow-S(o_{1})\geq-S(o_{2})\\
+ & \Longleftrightarrow Reg_{S}^{lininv}(o_{1})\geq Reg_{S}^{lininv}(o_{2})
+\end{align*}
+
+\end_inset
+
+2.1.3 Logarithmic Inversion
+\end_layout
+
+\begin_layout Standard
+위에서 언급된 변환은 단순 뺄셈이기 때문에, 매우 낮은 contrast(여기서 contrast는 outlier와 inlier의 차이,
+ 즉 ABOD가 낮은 contrast을 가진다는 것은 outlier와 inlier가 큰 차이가 없다는 뜻??)을 가지는 ABOD와
+ 같은 방법에는 적절하지 않다.
+ 이를 위해 아래와 같은 변환을 생각한다.
+\begin_inset Formula 
+\[
+Reg_{S}^{loginv}(o)\coloneqq-log(S(o)/S_{max})
+\]
+
+\end_inset
+
+ABOD는 0보다 큰 값을 가지기 때문에 위의 변환을 사용할 수 있다.
+ 또한 로그 함수가 단조 증가 함수이기 때문에 로그 변환은 ranking-stable하다.
+ 
+\end_layout
+
+\begin_layout Standard
+2.2 Normalization
+\end_layout
+
+\begin_layout Standard
+이상치 점수가 normalized scale에 있게 하기 위한 가장 간단한 방법은 최소값이 0이 되도록하는 선형 변환(simple
+ linear normalization)을 적용하는 것이다.
+\begin_inset Formula 
+\[
+Norm_{S}^{linear}(o)\coloneqq\df{S(o)-S_{min}}{S_{max}-S_{min}}
+\]
+
+\end_inset
+
+여기서 주목할 점은 
+\begin_inset Formula $S$
+\end_inset
+
+가 regular하다면 
+\begin_inset Formula $S_{min}=0$
+\end_inset
+
+이고 위의 공식을 간단하게할 수 있다.
+ 하지만 이는 점수의 분포에 contrast을 추가하지 않는다.
+ 따라서 아래에는 outlier와 inlier 사이의 차이, 즉 contrast을 더 강화하는 방법에 대해서 살펴본다.
+\end_layout
+
+\begin_layout Standard
+2.2.1 Statistical Scaling of Outlier Scores
+\end_layout
+
+\begin_layout Standard
+데이터의 분포에 대한 가정을 하지 않고 이상치 점수의 분포를 분석하는 것이 핵심이다.
+ 이를 위해서 uniform 분포를 가정한다면 과적합이 일어날 수 있으므로 특정 모수를 통해 여러 모양을 만들어내는 다른 분포를
+ 생각하는 것이 좋다.
+ 이러한 방법의 직관은 이상치 점수를 직접적으로 해석할 방법은 없지만 얼마나 '평범하지 않은지'(unusual) 그 정도를 평가하는
+ 것이다.
+ 논문에서는 가우시안 분포와 감마 분포를 예시로 든다.
+ 하지만 다른 분포도 적용될 수 있다.
+ 예를 들어서 비율에 기반한 LOF나 LDOF는 코쉬분포와 F 분포가 좋은 후보이다.
+\begin_inset Newline newline
+\end_inset
+
+가장 최적의 분포 선택은 알고리즘, 데이터 세트에 달려있다.
+ 따라서 여기서는 최적의 분포가 어떤 것이라고 제시하지는 않는다.
+ 하지만 여러 실험을 통해서 분포를 임의로 선택하는 것도 꽤 성능을 향상시킴이 밝혀졌다.
+\end_layout
+
+\begin_layout Standard
+2.2.2 Gaussian Scaling
+\end_layout
+
+\begin_layout Standard
+\noindent
+가우시안 스케일링은 주어진 이상치 점수들의 평균(
+\begin_inset Formula $\mu_{S}$
+\end_inset
+
+)과 표준편차(
+\begin_inset Formula $\sigma_{S}$
+\end_inset
+
+)와 누적분포함수(cumulative distribution function) 그리고 가우시안 에러 함수(Gaussian error
+ function: 
+\begin_inset Formula $erf()$
+\end_inset
+
+)을 이용하여 이상치 점수를 확률 값으로 변화시킨다.
+\begin_inset Formula 
+\[
+Norm_{S}^{gauss}(o)\coloneqq max\mm{0,erf\ss{\df{S(o)-\mu_{S}}{\sigma_{S}\cdot\rr 2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+where\threes\lhat{\mu}=\df 1n\sum_{i=1}^{n}S(o_{i}),\threes\lhat{\sigma}^{2}=\df 1n\sum_{i=1}^{n}S(o_{i})^{2}-\ss{\df 1n\sum_{i=1}^{n}S(o_{i})}^{2}
+\]
+
+\end_inset
+
+이 정의를 자세히 살펴보자.
+ 우선 가우시안 에러 함수의 정의는 아래와 같다.
+\begin_inset Formula 
+\begin{align*}
+erf(x) & \coloneqq P(-x\leq Y\leq x)\threes where\threes Y\sim N\ll{0,\df 12}\\
+ & =\int_{-x}^{x}\df 1{\rr{2\pi\cdot\df 12}}exp\mm{-\df 1{2\cdot\df 12}t^{2}}dt\\
+ & =\int_{-x}^{x}\df 1{\rr{\pi}}exp\mm{-t^{2}}dt\\
+ & =2\int_{0}^{x}\df 1{\rr{\pi}}exp\mm{-t^{2}}dt
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename 1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+시그모이드 함수와 유사한 모양이고 함수 값은 -1에서 1까지 가지는 것을 확인할 수 있다.
+ 위 그림에서 볼 수 있듯이 에러 함수는 x가 0이하이면 음수 값을 가진다.
+ 따라서 
+\begin_inset Formula $Norm_{S}^{gauss}(o)$
+\end_inset
+
+을 정의할 때 0과 함수값의 max로 정함으로써 음수가 나오는 것을 방지한 것으로 보인다.
+ 그렇다면 
+\begin_inset Formula $Norm_{S}^{gauss}(o)\coloneqq max\mm{0,erf\ss{\df{S(o)-\mu_{S}}{\sigma_{S}\cdot\rr 2}}}$
+\end_inset
+
+에서 
+\begin_inset Formula $erf\ss{\df{S(o)-\mu_{S}}{\sigma_{S}\cdot\rr 2}}$
+\end_inset
+
+가 음수가 나올 경우에 이 값을 0으로 대체해버린다는 뜻인데 이렇게 하는 것이 올바른 방법일까? 
+\begin_inset Formula $erf\ss{\df{S(o)-\mu_{S}}{\sigma_{S}\cdot\rr 2}}$
+\end_inset
+
+가 음수라는 얘기는 위 그래프에서 볼 수 있듯이 
+\begin_inset Formula $\df{S(o)-\mu_{S}}{\sigma_{S}\cdot\rr 2}$
+\end_inset
+
+가 음수여야 하고 분모는 무조건 양수이므로 분자인 
+\begin_inset Formula $S(o)-\mu_{S}$
+\end_inset
+
+가 음수여야한다.
+ 
+\begin_inset Formula $S(o)-\mu_{S}$
+\end_inset
+
+가 음수라는 얘기는 
+\begin_inset Formula $S(o)<\mu_{S}$
+\end_inset
+
+라는 뜻이다.
+ 즉, 어떤 점 
+\begin_inset Formula $o$
+\end_inset
+
+에 대한 이상치 점수인 
+\begin_inset Formula $S(o)$
+\end_inset
+
+가 이상치 점수들의 평균보다 작다는 것이다.
+ 이상치 점수가 작다는 것은 무엇을 의미할까? 이상치일 가능성이 작다는 것이다.
+ 이상치일 가능성이 작다는 것은 
+\begin_inset Formula $Norm_{S}^{gauss}(o)$
+\end_inset
+
+값을 0으로 만드는 것과 어느정도 일맥상통한다.
+ 
+\begin_inset Formula $Norm_{S}^{gauss}(o)$
+\end_inset
+
+은 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+의 범위에 있고 이는 이상치일 가능성을 뜻하기 때문에 
+\begin_inset Formula $Norm_{S}^{gauss}(o)$
+\end_inset
+
+이 0이라는 것은 이상치일 가능성이 작다는 뜻이기 때문이다.
+\begin_inset Newline newline
+\end_inset
+
+그렇다면 왜 하필 erf의 함수값으로 
+\begin_inset Formula $\df{S(o)-\mu_{S}}{\sigma_{S}\cdot\rr 2}$
+\end_inset
+
+을 사용할까? 이것은 표준 정규분포의 cdf 함수와 erf 함수와의 관계와 관련이 있다.
+ 표준 정규분포의 cdf 함수는 아래와 같이 정의된다.
+\begin_inset Formula 
+\[
+\Phi(x)=\int_{-\inf}^{x}\df 1{\rr{2\pi}}exp\mm{-\df 12x^{2}}
+\]
+
+\end_inset
+
+이를 이용해서 erf 함수를 변형하면 아래와 같다.
+\begin_inset Formula 
+\begin{align*}
+erf(x) & =2\int_{0}^{x}\df 1{\rr{\pi}}exp\mm{-t^{2}}dt\\
+ & Let\threes t=\df k{\rr 2},then\threes\df{dt}{dk}=\df 1{\rr 2}\\
+ & =\df 2{\rr{\pi}}\int_{0}^{x\rr 2}exp\mm{-\df{k^{2}}2}dk\cdot\df 1{\rr 2}\\
+ & =2\int_{0}^{x\rr 2}\df 1{\rr{2\pi}}exp\mm{-\df{k^{2}}2}dk\\
+ & =2\ll{\int_{-\inf}^{x\rr 2}\df 1{\rr{2\pi}}exp\mm{-\df{k^{2}}2}dk-\int_{-\inf}^{0}\df 1{\rr{2\pi}}exp\mm{-\df{k^{2}}2}dk}\\
+ & =2\ll{\Phi(x\rr 2)-\Phi(0)}\\
+ & =2\ll{\Phi(x\rr 2)-\df 12}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\Phi(x\rr 2)=\df 12\ll{erf(x)+1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longleftrightarrow\Phi(x)=\df 12\ll{erf\ss{\df x{\rr 2}}+1}
+\]
+
+\end_inset
+
+그런데, 여기서 
+\begin_inset Formula $x$
+\end_inset
+
+는 표준화된 값을 의미한다.
+ 따라서 만약, 
+\begin_inset Formula $x$
+\end_inset
+
+가 표준화되지 않았다면 이를 표준화시켜줘야한다.
+ 즉, 다시 말해서
+\begin_inset Formula 
+\[
+\Phi(x,\mu,\sigma)=\df 12\ll{erf\ss{\df{x-\mu}{\sigma\cdot\rr 2}}+1}
+\]
+
+\end_inset
+
+표본을 통해서는 
+\begin_inset Formula $\mu,\sigma$
+\end_inset
+
+에 대한 추정치를 통해서 표준화를 진행하면 된다.
+ 위 식을 이상치 값인 
+\begin_inset Formula $S(o)$
+\end_inset
+
+ 관점에서 보면 아래와 같다.
+\begin_inset Formula 
+\[
+cdf_{S}^{gauss}(o)\coloneqq\df 12\ll{erf\ss{\df{S(o)-\mu_{S}}{\sigma_{s}\cdot\rr 2}}+1}
+\]
+
+\end_inset
+
+여기서 
+\begin_inset Formula $cdf_{S}^{gauss}(o)$
+\end_inset
+
+는 관측된 
+\begin_inset Formula $S(o)$
+\end_inset
+
+에 대한 표본 cdf을 의미한다.
+ 해당 cdf 함수에 
+\begin_inset Formula $\mu_{cdf}=cdf_{S}^{gauss}(\mu_{S})=\df 12,max_{cdf}=1\text{을 }$
+\end_inset
+
+적용하여
+\series bold
+\shape italic
+ linear regularization
+\series default
+\shape default
+을 시행하면 아래와 같다.
+\begin_inset Formula 
+\begin{align*}
+\df{cdf_{S}^{gauss}(o)-\mu_{cdf}}{max_{cdf}-\mu_{cdf}} & =\df{cdf_{S}^{gauss}(o)-1/2}{1-1/2}\\
+ & =2\cdot\mm{cdf_{S}^{gauss}-1}
+\end{align*}
+
+\end_inset
+
+이를 이용하면 cdf의 linear regularization을 시행한 것이 결국 맨 앞에서 정의한 
+\begin_inset Formula $Norm_{S}^{gauss}(o)$
+\end_inset
+
+와 동일함을 알 수 있다.
+\begin_inset Formula 
+\[
+max\mm{0,\df{cdf_{S}^{gauss}(o)-\mu_{cdf}}{max_{cdf}-\mu_{cdf}}}=max\mm{0,2\cdot\mm{cdf_{S}^{gauss}-1}}=Norm_{S}^{gauss}(o)
+\]
+
+\end_inset
+
+<결론>
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Norm_{S}^{gauss}(o)\coloneqq max\mm{0,erf\ss{\df{S(o)-\mu_{S}}{\sigma_{S}\cdot\rr 2}}}$
+\end_inset
+
+라는 정의는 
+\series bold
+\shape italic
+cdf의 linear regularization
+\series default
+\shape default
+으로부터 비롯되었다.
+ 그런데 여기서 살펴보아야할 의미는 아래와 같다.
+\end_layout
+
+\begin_layout Enumerate
+linear regularization? 
+\begin_inset Formula $\df{cdf_{S}^{gauss}(o)-\mu_{cdf}}{max_{cdf}-\mu_{cdf}}$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+최소값을 -1, 최대값을 1로 만들어주는 regularization(cdf의 최대값이 1, 최소값이 0이기 때문에)
+\end_layout
+
+\begin_layout Enumerate
+cdf를 왜 썼을까? 이상치의 분포가 정규분포를 따른다고 생각을 하고 모수 
+\begin_inset Formula $\mu,\sigma$
+\end_inset
+
+를 적률추정량을 통해서 추정한 후, 추정된 모수로 만든 
+\begin_inset Formula $cdf$
+\end_inset
+
+는 
+\begin_inset Formula $cdf$
+\end_inset
+
+의 특징상 0과 1사이의 값을 가진다.
+ 그리고 이상치 점수가 크면 클 수록 이상치일 가능성이 높다는 뜻인데, 이상치 점수가 큰 관측치는 해당 
+\begin_inset Formula $cdf$
+\end_inset
+
+값이 클 것이다.
+ 이러한 특징 때문에 
+\begin_inset Formula $cdf$
+\end_inset
+
+를 사용한 것처럼 보인다.
+\end_layout
+
+\begin_layout Standard
+2.2.3 Gamma Scaling
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\sim Gamma(k,\theta)$
+\end_inset
+
+일 때, 모수에 따른 감마 분포의 모양을 살펴보면 아래와 같다.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename 2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+정규 분포보다는 좀 더 다양한 모양을 표현할 수 있기 때문에 감마 스케일링을 사용하기도 하는 것 같다.
+ 감마 분포의 모수는 앞서 가우시안 분포에서와 마찬가지로 적률추정량을 이용하여 추정을 한다.
+ 
+\begin_inset Formula $\lhat k\coloneqq\df{\lhat{\mu}^{2}}{\lhat{\sigma}^{2}},\lhat{\theta}\coloneqq\df{\lhat{\sigma}}{\lhat{\mu}^{2}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+가우시안 스케일링과 유사하게, 감마 스케일링도 cdf의 linear regularization을 이용하여 아래와 같이 정의한다.
+\begin_inset Formula 
+\[
+Norm_{S}^{gamma}(o)\coloneqq max\mm{0,\df{cdf_{S}^{gamma}(o)-\mu_{cdf}}{max_{cdf}-\mu_{cdf}}}
+\]
+
+\end_inset
+
+결국 분포를 이용한 normalization에서 어떤 분포든간에, 해당 분포 cdf의 linear regularization을 이용하는데,
+ 정규분포인 경우에는 그 형태가 특별하게 
+\begin_inset Formula $erf$
+\end_inset
+
+을 사용하여 나타낼 수 있었던 것 뿐이다.
+\end_layout
+
+\begin_layout Standard
+3.
+ Practice
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<message=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+load("C:/Users/sbh0613/Desktop/와이빅타/이상치분석/Func.trans/workspace.RData")
+\end_layout
+
+\begin_layout Plain Layout
+
+library(HighDimOut)
+\end_layout
+
+\begin_layout Plain Layout
+
+data(TestData)
+\end_layout
+
+\begin_layout Plain Layout
+
+mydata = TestData
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+# ordinary ABOD
+\end_layout
+
+\begin_layout Plain Layout
+
+abod.result = Func.ABOD(mydata[,-3],basic=T,perc=1)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+mydata[order(abod.result,decreasing=F),] # abod는 값이 작을 수록 outlier라고 판단.
+\end_layout
+
+\begin_layout Plain Layout
+
+# Fast ABOD
+\end_layout
+
+\begin_layout Plain Layout
+
+# Feature Bagging
+\end_layout
+
+\begin_layout Plain Layout
+
+fbod.result = Func.FBOD(mydata[,-3],iter=10,k.nn=5)
+\end_layout
+
+\begin_layout Plain Layout
+
+mydata[order(fbod.result,decreasing=T),] # fbod는 값이 클 수록 outlier라고 판단.
+\end_layout
+
+\begin_layout Plain Layout
+
+# Func.SOD
+\end_layout
+
+\begin_layout Plain Layout
+
+sod.result = Func.SOD(mydata[,-3],k.nn=10,k.sel=5,alpha=0.8)
+\end_layout
+
+\begin_layout Plain Layout
+
+getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+mydata[order(sod.result,decreasing=T),] # sod는 값이 클 수록 outlier라고 판단.
+\end_layout
+
+\begin_layout Plain Layout
+
+# Transform outlier scores into range 0 and 1
+\end_layout
+
+\begin_layout Plain Layout
+
+trans.abod = Func.trans(abod.result,method="ABOD")
+\end_layout
+
+\begin_layout Plain Layout
+
+trans.fbod = Func.trans(fbod.result,method="FBOD")
+\end_layout
+
+\begin_layout Plain Layout
+
+trans.sod = Func.trans(sod.result,method="SOD")
+\end_layout
+
+\begin_layout Plain Layout
+
+trans.merge = trans.abod + trans.fbod + trans.sod
+\end_layout
+
+\begin_layout Plain Layout
+
+mydata[order(trans.merge,decreasing=T),]
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

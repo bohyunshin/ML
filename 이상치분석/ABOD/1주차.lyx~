@@ -1,0 +1,782 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+% LaTeX에서 한글사용을 위해 사용해야하는 패키지
+\usepackage[hangul]{kotex}
+\setmainhangulfont{함초롬바탕} % 메인 한글폰트를 지정해줌
+
+
+% 페이지 스타일 'fancy'를 사용하게 되면, 페이지 윗부분에 줄을 하나 그어줌.
+% fancy 스타일을 사용할때 사용할수 있는 옵션은 아래와 같다.
+\lhead{} % 줄 왼쪽 부분에 적을 내용
+\chead{} % 가운데 부분
+\rhead{} % 오른쪽 부분
+%=====================================%
+
+\renewcommand\footrulewidth{0.4pt}  % 페이지번호 위에 직선을그어주는 명령어
+
+
+
+
+%=== 문서의 줄간격을 수정해주는 패키지 ===%
+\usepackage{setspace} 
+\setstretch{1.5} % 간격 임의로 지정 
+% \onehalfspacing  한칸반 간격인것 같음
+%=====================================%
+
+\usepackage{tikz} % LaTeX으로 Graphical한 작업을 할때 사용하는 패키지
+
+
+
+\usepackage{hyperref} % 하이퍼링크 색깔 바꿔주기 위해
+
+% 아래 옵션을 활성화시키면 하이퍼링크걸린 문자들의 색깔이 red로 변함
+%\hypersetup{         
+%    colorlinks,
+%    citecolor=red,
+%    filecolor=red,
+%    linkcolor=red,
+%    urlcolor=red
+%}
+
+
+%\usepackage{multicol} % 표지는 one-column, 본문은 two-column 적용해주기 위해
+% 위 명령어를 활성화 시켜준 뒤
+% \begin{multicols}{2}    \end{multicols} 사이에 본문을 작성하면
+% 그 부분만 column이 나눠짐
+\end_preamble
+\options most, usenames, dvipsnames
+\use_default_options true
+\begin_modules
+tcolorbox
+theorems-ams
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\output_sync_macro "\synctex=1"
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic true
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\b}{\beta}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\a}{\alpha}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\ddd}{\cdots}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\conpr}[4]{Pr(#1=#2\sumset#3=#4)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pr}[2]{Pr(#1=#2)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\shat}[1]{\hat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lhat}[1]{\widehat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\inf}{\infty}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lam}{\lambda}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\df}[2]{\dfrac{#1}{#2}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ss}[1]{\left(#1\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\mm}[1]{\left\{  #1\right\}  }
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ll}[1]{\left[#1\right]}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\si}{\sigma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\rr}[1]{\sqrt{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pdf}[1]{f_{#1}(x)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pmf}[1]{p_{#1}(x)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\d}{\cdot}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ones}{\,}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\twos}{\:}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\threes}{\;}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\d}{\delta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\app}{\thickapprox}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ep}{\epsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\lam}{\lambda}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pp}{\propto}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\dltkd}{\geq}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\dlgk}{\leq}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pro}{\times}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\shape smallcaps
+\size normal
+Yonsei University, Department of Applied Statistics
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\shape default
+\size default
+ 
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\series bold
+\size giant
+Outlier Analyis - ABOD
+\series default
+\size default
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "2pt"
+
+\end_inset
+
+
+\begin_inset VSpace 4in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+12기 신보현
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+0.
+ Introduction
+\end_layout
+
+\begin_layout Standard
+이상치란? 간단하게, 다른 데이터와 비교할 때, 다른 특징을 가지고 있는 데이터.(그 데이터의 일반적인 분포와 맞지 않은 데이터)
+\begin_inset Newline newline
+\end_inset
+
+이상치 탐지의 중요성: 이상치를 우연히 일어났다고 간주하는 것보다는, 그 이상치가 다른 mechanism에서 왔다고 보고 이에 주목을
+ 하는 것이 좋다.
+\begin_inset Newline newline
+\end_inset
+
+ex) credit card abuse in financial transcations data, identification of
+ measurement errors in scientific data...
+\begin_inset Newline newline
+\end_inset
+
+위와 같은 필드에서, 이상치 데이터를 탐지하여 그에 맞는 대응책을 만드는 것이 효과적일 것이다.
+\begin_inset Newline newline
+\end_inset
+
+위의 논의를 종합했을 때, 이상치를 멋진 말로 정의하면 an observation which deviates so much from
+ other observations as to arouse suspicions that it was generated by a different
+ mechanism.
+\end_layout
+
+\begin_layout Standard
+그렇다면, 다른 메카니즘에서 나왔다는 기준을 어떻게 설정할까? 이 기준을 설정하는 방향에 따라서, 이상치를 탐지하는 기법도 달라진다.
+\end_layout
+
+\begin_layout Standard
+가장 전통적인 기준은 데이터간의 거리를 측정하는 것이다.
+ 데이터간의 거리 측정의 개념은 곧 클러스터링의 개념과 일맥상통한다.
+ 따라서 기존의 이상치 탐색 과정은 KNN 등을 사용한 클러스터링 기법이 많은 것 같았다.(구글링 결과..)
+\end_layout
+
+\begin_layout Standard
+하지만 이는 분명한 단점을 가지고 있는데, feature가 많아지는 high dimensional data(고차원 데이터)에서 성능이
+ 떨어진다는 것이다.
+ 즉,다시 말해 차원이 높아질수록 curse of dimensionality(차원의 저주)로 인해서 데이터들 간의 거리가 가지는
+ 의미가 점점 사라진다.
+\begin_inset Formula 
+\[
+\underset{d\rightarrow\inf}{lim}\df{dist_{max}-dist_{min}}{dist_{min}}\longrightarrow0
+\]
+
+\end_inset
+
+이를 다른 말로 표현하면, 차원이 높아지면서 모든 점들이 비슷한 거리에 위치하고 있고 이러한 현상을 data sparsity 또는
+ distance concentration이라고 부른다.
+\begin_inset Newline newline
+\end_inset
+
+이렇게 차원이 높아질수록 거리가 가지는 의미가 사라지므로 데이터들간의 거리에 기반한 이상치 탐색은 그 성능이 떨어질 수밖에 없을
+ 것이다.
+\end_layout
+
+\begin_layout Standard
+1.
+ Angle-Basd Outlier Dection in High-dimensional Data(ABOD)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename 1주차 그림/0.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+나름 유명한 듯..
+ 409회 인용..! 1362회 인용은 다음에..(너무 어렵다..ㅠㅠㅠ)
+\end_layout
+
+\begin_layout Standard
+Reference: https://imada.sdu.dk/~zimek/publications/KDD2008/KDD08-ABOD.pdf
+\end_layout
+
+\begin_layout Standard
+1-1 Intuition.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename 1주차 그림/1.PNG
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Figure 1
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename 1주차 그림/2.PNG
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Figure 2
+\end_layout
+
+\begin_layout Standard
+Figure 1을 보면, 각도 
+\begin_inset Formula $\a,\b,\gamma$
+\end_inset
+
+가 표시되어 있다.
+ 이상치로 의심이 되는 각 
+\begin_inset Formula $\gamma$
+\end_inset
+
+가 상대적으로 작음을 확인할 수 있다.
+ 이상치로 의심이 되는 오른쪽 데이터을 기준으로 다른 두 데이터를 정한 후, 세점을 이어 만든 각도들은 그 값의 변동 폭이 작다.
+ 원 안에 있는 점 하나를 정한 후, 앞의 과정을 동일하게 진행하면, 최대값과 최소값의 차이가 상대적으로 더 크다.
+ ABOD는 이러한 intuition에서 만들어졌다.
+\end_layout
+
+\begin_layout Standard
+1-2 Formaula.
+\begin_inset Newline newline
+\end_inset
+
+하나의 기준 점과 다른 두 점을 잡아서, scalar product(내적)을 계산하고 이를 벡터의 길이 제곱으로 normalize한다.(벡터의
+ 길이 제곱으로 나눠준다.) 벡터의 길이 제곱의 역수를 곱해주는 것은 어떤 weighting factor을 곱해주는 과정으로 볼 수
+ 있고, 길이가 길면 작은 역수 값이 곱해지는 것으로, 길이가 작으면 큰 역수 값이 곱해지는 것이다.
+ 이는 기존의 이상치 탐지를 할 때 사용되는 거리 개념을 ABOF에 추가한 것으로, 거리와 각도로 ABOF 공식을 정의한다.
+\begin_inset Newline newline
+\end_inset
+
+정리하면,
+\begin_inset Newline newline
+\end_inset
+
+두 벡터의 내적 
+\begin_inset Formula $\longrightarrow$
+\end_inset
+
+ 두 벡터 사이의 각도를 반영
+\begin_inset Newline newline
+\end_inset
+
+두 벡터의 제곱합으로 normalize(나눠주기) 
+\begin_inset Formula $\longrightarrow$
+\end_inset
+
+두 벡터의 길이 반영
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\longrightarrow$
+\end_inset
+
+이들의 분산으로 ABOF를 정의함.
+\begin_inset Newline newline
+\end_inset
+
+<논문에서의 정의>: The angle-based outlier factor ABOF(
+\begin_inset Formula $\overrightarrow{A}$
+\end_inset
+
+) is the variance over the angles between the difference vectors of 
+\begin_inset Formula $\overrightarrow{A}$
+\end_inset
+
+ to all pairs of points in 
+\begin_inset Formula $D$
+\end_inset
+
+ weighted by the distance of the points:
+\begin_inset Newline newline
+\end_inset
+
+위의 과정을 수학적인 식으로 표현하면 아래와 같다.
+\begin_inset Formula 
+\[
+D:\ones given\ones database,\ones\overrightarrow{A},\overrightarrow{B},\overrightarrow{C}\in D
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overline{BC}=\overrightarrow{C}-\overrightarrow{B}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ABOF(\overrightarrow{A}) & =VAR_{\overrightarrow{B},\overrightarrow{C}\in D}\ss{\df{<\overline{AB},\overline{AC}>}{||\overline{AB}||^{2}\cdot||\overline{AC}||^{2}}}\\
+ & =\df{\sum_{\overrightarrow{B}\in D}\sum_{\overrightarrow{C}\in D}\ss{\df 1{||\overline{AB}||\cdot||\overline{AC}||}\cdot\df{<\overline{AB},\overline{AC}>}{||\overline{AB}||^{2}\cdot||\overline{AC}||^{2}}}}{\sum_{\overrightarrow{B}\in D}\sum_{\overrightarrow{C}\in D}\ss{\df 1{||\overline{AB}||\cdot||\overline{AC}||}}}^{2}\\
+ & -\ss{\df{\sum_{\overrightarrow{B}\in D}\sum_{\overrightarrow{C}\in D}\ss{\df 1{||\overline{AB}||\cdot||\overline{AC}||}\cdot\df{<\overline{AB},\overline{AC}>}{||\overline{AB}||^{2}\cdot||\overline{AC}||^{2}}}}{\sum_{\overrightarrow{B}\in D}\sum_{\overrightarrow{C}\in D}\ss{\df 1{||\overline{AB}||\cdot||\overline{AC}||}}}}^{2}
+\end{align*}
+
+\end_inset
+
+1-3 Advantage / Disadvantage.
+\begin_inset Newline newline
+\end_inset
+
+대부분의 이상치 탐지 모델은 결과에 아주 중요한 역할을 하는 parameter를 사용자가 직접 결정해야한다.
+ 이상치 탐지는 어느 데이터가 이상치인지 애초에 알지 못하므로 비지도 학습의 일부로 볼 수 있는데 이러한 비지도학습에서 parameter
+ 설정은 크게 어려울 수 있다.
+ ABOD는 이러한 parameter 설정을 하지 않는 다는 것이 큰 장점이다.
+\begin_inset Newline newline
+\end_inset
+
+하지만 어떤 데이터의 ABOD 값을 구하기 위해 다른 모든 점에 대한 ABOD를 계산하기 때문에 계산 시간이 오래걸린다는 단점이
+ 있다.
+\end_layout
+
+\begin_layout Standard
+1-4 Others.
+\end_layout
+
+\begin_layout Itemize
+Speed-up by Approximation (FastABOD): ABOD은 모든 데이터 짝에 대해서 ABOD 값을 계산하기 때문에
+ 시간이 오래 걸린다는 단점이 있다.
+ 이러한 단점을 극복하기 위해, approximation algorithm인 FastABOD가 개발되었다.
+\begin_inset Newline newline
+\end_inset
+
+아이디어는 간단하다.
+ 모든 데이터에 대해 ABOD 값을 계산 하는 것이 아니라, 가장 가까운 k개의 데이터에 대한 ABOD 값만을 계산한다.
+ 하지만 k라는 parameter을 설정해야하는 단점 때문에, 어떤 k를 선택하느냐에 따라서 성능이 좌지우지 된다.
+ 즉, parameter을 설정하지 않아도 된다는 장점이 사라지는 것이다.
+\end_layout
+
+\begin_layout Itemize
+Approximation as Filter-Refinement Approach(LB-ABOD): ABOD의 계산상의 문제와 k에
+ 따라서 성능이 좌지우지되는 FastABOD의 단점을 해결한 방법.
+ (이해 못했..)
+\end_layout
+
+\begin_layout Itemize
+Generalization for Arbitrary Data Types - Kernel-based ABOF
+\end_layout
+
+\begin_layout Standard
+1-5 Usage.
+\begin_inset Newline newline
+\end_inset
+
+R에서의 사용은 https://cran.r-project.org/web/packages/abodOutlier/abodOutlier.pdf은
+ 참조하면 된다.
+ (ABOD, Fast ABOD)
+\end_layout
+
+\begin_layout Standard
+python에서의 사용은 https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.mode
+ls.abod을 참조하면 된다.
+ (ABOD, Fast ABOD)
+\end_layout
+
+\begin_layout Standard
+또는 https://github.com/MarinYoung4596/OutlierDetection/blob/master/OutlierDetectio
+n/Python%20Implementation/abod.py에 있는 함수를 참조하면 된다.
+ (ABOD, FastABOD, LB-ABOD)
+\end_layout
+
+\begin_layout Standard
+2.
+ kaggle 데이터에 적용해보기
+\end_layout
+
+\begin_layout Standard
+outlier가 있는 데이터를 찾아보려했지만...
+ 힘들어서 매우 불균형 데이터인 캐글 데이터로 해보았다.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename 1주차 그림/4.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+data = read.csv("C:/Users/sbh0613/Desktop/와이빅타/이상치분석/creditcardfraud/creditcard.cs
+v")
+\end_layout
+
+\begin_layout Plain Layout
+
+dim(data)
+\end_layout
+
+\begin_layout Plain Layout
+
+table(data$Class)
+\end_layout
+
+\begin_layout Plain Layout
+
+table(data$Class)[2]/(table(data$Class)[1] + table(data$Class)[2])
+\end_layout
+
+\begin_layout Plain Layout
+
+which(data$Class == 1)[1:10]
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<message=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(abodOutlier)
+\end_layout
+
+\begin_layout Plain Layout
+
+start_time <- Sys.time()
+\end_layout
+
+\begin_layout Plain Layout
+
+abod.result = abod(data[500:550,],method="complete")
+\end_layout
+
+\begin_layout Plain Layout
+
+end_time <- Sys.time()
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+abod.result[1:5]
+\end_layout
+
+\begin_layout Plain Layout
+
+abod.mat = cbind(abod.result,500:550)
+\end_layout
+
+\begin_layout Plain Layout
+
+head(abod.mat[order(abod.result),])
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
