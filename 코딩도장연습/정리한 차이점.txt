@@ -1,0 +1,27 @@
+1. readline(prompt = 'enter number: ')   from r
+   input()  from python
+
+2. sprintf('나의 나이는 %s 입니다',age)   from r
+   '나의 나이는 %s 입니다' % age    from python
+
+3. for (i in strsplit(x,'')[[1]])   from r
+   for i in string   from python
+
+4. unlist(gregexpr("[A-Z]", i)) == 1    from r
+   string.isupper()   from python
+
+5. paste(string1, string2, sep='')   from r
+   strgin1 + string2   from python
+
+6. paste(c('a','a','a'),collapse='')   from r
+   'a' * 3   from python
+
+7. R에서 . 기준으로 split하려면
+strsplit('a.b.c.d',split='[.]')라고 해줘야함 메타문자임!
+
+8. eval(parse(text='5+5'))   from r
+eval('5+5')   from python
+r에서 eval은 expression을 계산해준다. 따라서 그냥 ''으로 하면 character이기 때문에 실행이 안 된다.
+
+9. nchar(x)    from r
+len(x)   from python
