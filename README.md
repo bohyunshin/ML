@@ -10,9 +10,9 @@ R shiny: R shiny Dashboard 최종 코드
 
 코딩 도장: 알고리즘 연습 끄적끄적...
 
-Julia: Julia 내용 정리
+Julia: 기초 문법 정리
 
-LDA:논문 내용
+LDA: 논문 내용
 
 NLP: 텍스트 데이터 관련 공부
 
