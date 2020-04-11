@@ -6,4 +6,5 @@ ESL 책을 공부한 repository 입니다. 자료들은 연세대학교 전용�
 ### Contents
 
 - [X] 1. Loss Function and Bias-Variance Trade-Off (3.20 완료)
-- [X] 2. Linear Regression Part 1 (3.28 완료)
+- [X] 2. Linear Methods for Regression Part 1 (3.28 완료)
+- [X] 3 ~ 4. Linear Methods for Regression Part 2 (4.11 완료)
