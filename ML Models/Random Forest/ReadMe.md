@@ -3,4 +3,4 @@ random forest을 깊게 공부하려면 decision trees, bagging, boostrap 을 �
 
 ## Contents
 - [ ] bagging: Bagging Predictors, Leo Breiman, 1994
-- [ ] boostrap
+- [ ] boostrap: [여기](https://github.com/bohyunshin/Statistics/tree/master/Bootstrap)에 기록하였습니다.
